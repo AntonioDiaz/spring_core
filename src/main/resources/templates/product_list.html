@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="template :: header"></head>
+<body>
+<div class="container">
+    <div th:insert="template :: div_title('Product - list')"></div>
+    <div th:if="${not #lists.isEmpty(list)}">
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Desc.</th>
+                <th>Price</th>
+                <th>Image URL</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr th:each="product : ${list}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.description}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.imageUrl}"></td>
+                <td>
+                    <a th:href="@{|/product/show/${product.id}|}">details</a>
+                    |
+                    <a th:href="@{|/product/update/${product.id}|}">update</a>
+                    |
+                    <a th:href="@{|/product/doDelete/${product.id}|}">delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div th:if="${#lists.isEmpty(list)}">Not products available</div>
+    <hr>
+    <a href="/">back</a>
+</div>
+</body>
+</html>

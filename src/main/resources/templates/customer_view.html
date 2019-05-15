@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="template :: header"></head>
+<body>
+<div class="container">
+    <div th:insert="template :: div_title('Customer - info')"></div>
+    <div class="row">
+        <div class="col-sm-4">Id</div>
+        <div th:text="${customer.id}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">First Name</div>
+        <div th:text="${customer.firstName}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">Second Name</div>
+        <div th:text="${customer.secondName}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">email</div>
+        <div th:text="${customer.email}"></div>
+    </div>
+    <hr>
+    <a href="/customer/list">back</a>
+</div>
+</body>
+</html>

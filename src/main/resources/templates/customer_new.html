@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="template :: header"></head>
+<body>
+    <div class="container">
+        <div th:insert="template :: div_title('Customer - new')"></div>
+        <form th:replace="template_form_customer :: form"></form>
+        <hr>
+        <a href="/">back</a>
+    </div>
+</body>
+</html>

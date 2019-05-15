@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<form th:object="${customer}" th:action="@{/customer/doCreate}" method="post" th:fragment="form">
+    <input type="hidden" th:field="*{id}"/>
+    <input type="hidden" th:field="*{version}"/>
+    <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" class="form-control" th:field="*{firstName}">
+    </div>
+    <div class="form-group">
+        <label>Second Name:</label>
+        <input type="text" class="form-control" th:field="*{secondName}">
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" th:field="*{email}">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

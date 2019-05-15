@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="template :: header"></head>
+<body>
+<div class="container">
+    <div th:insert="template :: div_title('Product - info')"></div>
+    <div class="row">
+        <div class="col-sm-4">Id</div>
+        <div th:text="${product.id}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">Description</div>
+        <div th:text="${product.description}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">Price</div>
+        <div th:text="${product.price}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">Image URL</div>
+        <div th:text="${product.imageUrl}"></div>
+    </div>
+    <hr>
+    <a href="/product/list">back</a>
+</div>
+</body>
+</html>

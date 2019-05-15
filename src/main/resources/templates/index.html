@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="template :: header"></head>
+<body>
+<div class="container">
+    <div th:insert="template :: div_title('Spring MVC')"></div>
+    <h4><a href="/product/list">Products List</a></h4>
+    <h4><a href="/product/create">Products New</a></h4>
+    <br>
+    <h4><a href="/customer/list">Customer List</a></h4>
+    <h4><a href="/customer/create">Customer New</a></h4>
+</div>
+</body>
+</html>
